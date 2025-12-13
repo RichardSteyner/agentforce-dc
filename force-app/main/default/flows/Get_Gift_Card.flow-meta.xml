@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>63.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assign</name>
+        <label>Assign</label>
+        <locationX>578</locationX>
+        <locationY>207</locationY>
+        <assignmentItems>
+            <assignToReference>GiftCardCode</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Thank you, you may use this gift card code: 022e9637-1762-407e-93c5-a3e50ec370fb</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Gift_Card_Granted</targetReference>
+        </connector>
+    </assignments>
+    <environments>Default</environments>
+    <interviewLabel>Get Gift Card {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Get Gift Card</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Gift_Card_Granted</name>
+        <label>Gift Card Granted</label>
+        <locationX>592</locationX>
+        <locationY>363</locationY>
+        <inputAssignments>
+            <field>Gift_Card_Distributed__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>Contact</object>
+    </recordUpdates>
+    <start>
+        <locationX>446</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>Assign</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Gift card code</description>
+        <name>GiftCardCode</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>User Feedback</description>
+        <name>UserFeedback</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

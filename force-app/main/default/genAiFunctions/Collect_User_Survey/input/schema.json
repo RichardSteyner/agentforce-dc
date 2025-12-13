@@ -1,0 +1,14 @@
+{
+  "required" : [ "SurveyFeedback" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "SurveyFeedback" : {
+      "title" : "SurveyFeedback",
+      "description" : "Get the user feedback about their experience in natural language",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

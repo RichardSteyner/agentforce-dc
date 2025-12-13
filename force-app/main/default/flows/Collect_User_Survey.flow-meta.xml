@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>63.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assign_Status</name>
+        <label>Assign Status</label>
+        <locationX>572</locationX>
+        <locationY>182</locationY>
+        <assignmentItems>
+            <assignToReference>Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Thank you for providing the feedback! Feedback is collected</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>FeedbackCollected</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <environments>Default</environments>
+    <interviewLabel>Collect User Survey {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Collect User Survey</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>446</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>Assign_Status</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>FeedbackCollected</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>Status of feedback collection operation</description>
+        <name>Status</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>Get the user feedback about their experience in natural language</description>
+        <name>SurveyFeedback</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>
