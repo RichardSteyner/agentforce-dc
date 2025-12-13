@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlannerBundle xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <description>Deliver personalized customer interactions with an autonomous AI agent. Agentforce Service Agent intelligently supports your customers with common inquiries.</description>
+    <localActionLinks>
+        <genAiFunctionName>AnswerQuestionsWithKnowledge_16jgL000000lGNt</genAiFunctionName>
+    </localActionLinks>
+    <localTopicLinks>
+        <genAiPluginName>Service_Compatibility_Assessment_16jgL000000lGNt</genAiPluginName>
+    </localTopicLinks>
+    <localTopics>
+        <fullName>Service_Compatibility_Assessment_16jgL000000lGNt</fullName>
+        <canEscalate>true</canEscalate>
+        <description>Determine whether the service the client needs aligns with the software technologies in which our company specializes.</description>
+        <developerName>Service_Compatibility_Assessment_16jgL000000lGNt</developerName>
+        <genAiPluginInstructions>
+            <description>Ask the client to describe their required service in detail. If the description is vague or incomplete, politely request clarification.</description>
+            <developerName>instruction_1</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction 1</masterLabel>
+            <sortOrder>0</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Execute the Get_Software_Technologies action to obtain the list of software technologies our company specializes in.</description>
+            <developerName>instruction_2</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction 2</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Compare the client’s service description with the items in available_technologies. If at least one relevant technology matches or is closely related, classify the service as Compatible. Otherwise, classify it as Not Compatible.</description>
+            <developerName>instruction_3</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction 3</masterLabel>
+            <sortOrder>2</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Compatible case: Inform the client that their request aligns with our areas of expertise.
+Politely request their contact details: full name, company name, email, phone number and preference contact date time. Once collected, execute the Create_Lead_and_Event action to register a new lead and log an event for follow-up.</description>
+            <developerName>instruction_4</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction 4</masterLabel>
+            <sortOrder>3</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Not compatible case: Thank the client for their interest and kindly explain that the requested service is not currently within our supported technologies.
+Still request contact information (name, company, email, phone) to record potential future opportunities.
+Execute the Create_Lead_Record action to create a lead only. Close the interaction courteously, mentioning that we will reach out if our technology coverage expands.</description>
+            <developerName>instruction_5</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction 5</masterLabel>
+            <sortOrder>4</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Do not execute any create actions unless the client provides a clear service description and valid contact information.</description>
+            <developerName>instructions_0_1760827698497</developerName>
+            <language>en_US</language>
+            <masterLabel>instructions_0_1760827698497</masterLabel>
+            <sortOrder>5</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>Create_Lead_Record_179gL000000RZ05</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>Create_Lead_and_Event_179gL000000RZ05</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>Get_Software_Technologies_179gL000000RZ05</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>Get_Software_Technologies_179gL000000RZ05</fullName>
+            <description>Get Software Technologies</description>
+            <developerName>Get_Software_Technologies_179gL000000RZ05</developerName>
+            <invocationTarget>Get_Software_Technologies</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>Get_Software_Technologies</localDeveloperName>
+            <masterLabel>Get Software Technologies</masterLabel>
+        </localActions>
+        <localActions>
+            <fullName>Create_Lead_and_Event_179gL000000RZ05</fullName>
+            <description>Create Lead and Event for contact to Lead</description>
+            <developerName>Create_Lead_and_Event_179gL000000RZ05</developerName>
+            <invocationTarget>Create_Lead_and_Event</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>Create_Lead_and_Event</localDeveloperName>
+            <masterLabel>Create Lead and Event</masterLabel>
+        </localActions>
+        <localActions>
+            <fullName>Create_Lead_Record_179gL000000RZ05</fullName>
+            <description>Create new Lead</description>
+            <developerName>Create_Lead_Record_179gL000000RZ05</developerName>
+            <invocationTarget>Create_Lead_Record</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>Create_Lead_Record</localDeveloperName>
+            <masterLabel>Create Lead Record</masterLabel>
+            <source>Create_Lead_Record</source>
+        </localActions>
+        <localDeveloperName>Service_Compatibility_Assessment</localDeveloperName>
+        <masterLabel>Service Compatibility Assessment</masterLabel>
+        <pluginType>Topic</pluginType>
+        <scope>Your job is only to assess the client&apos;s service requirements and confirm whether they match the software technologies our company provides expertise in.</scope>
+    </localTopics>
+    <masterLabel>Codifacil Agent</masterLabel>
+    <plannerActions>
+        <fullName>AnswerQuestionsWithKnowledge_16jgL000000lGNt</fullName>
+        <description>Answers questions about company policies and procedures, troubleshooting steps, or product information. For example: “What is your return policy?” “How do I fix an issue?” or “What features does a product have?”</description>
+        <developerName>AnswerQuestionsWithKnowledge_16jgL000000lGNt</developerName>
+        <invocationTarget>streamKnowledgeSearch</invocationTarget>
+        <invocationTargetType>standardInvocableAction</invocationTargetType>
+        <isConfirmationRequired>false</isConfirmationRequired>
+        <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+        <localDeveloperName>AnswerQuestionsWithKnowledge</localDeveloperName>
+        <masterLabel>Answer Questions with Knowledge</masterLabel>
+        <progressIndicatorMessage>Getting answers</progressIndicatorMessage>
+        <source>EmployeeCopilot__AnswerQuestionsWithKnowledge</source>
+    </plannerActions>
+    <plannerSurfaces>
+        <adaptiveResponseAllowed>true</adaptiveResponseAllowed>
+        <callRecordingAllowed>false</callRecordingAllowed>
+        <surface>SurfaceAction__Messaging</surface>
+        <surfaceType>Messaging</surfaceType>
+    </plannerSurfaces>
+    <plannerType>AiCopilot__ReAct</plannerType>
+    <ruleExpressions>
+        <conditions>
+            <leftOperand>isVerified</leftOperand>
+            <leftOperandType>Variable</leftOperandType>
+            <operator>equal</operator>
+            <rightOperandValue>true</rightOperandValue>
+        </conditions>
+        <expression>Verified_User</expression>
+        <expressionLabel>Verified User</expressionLabel>
+        <expressionName>Verified_User</expressionName>
+        <expressionType>sel</expressionType>
+    </ruleExpressions>
+</GenAiPlannerBundle>

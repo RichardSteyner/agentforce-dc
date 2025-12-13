@@ -1,0 +1,49 @@
+{
+  "required" : [ "Company", "Email", "Last_Name", "Preference_DateTime_Contact", "ServiceRequested" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Company" : {
+      "title" : "Company",
+      "description" : "Company Customer",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Email" : {
+      "title" : "Email",
+      "description" : "Email customer",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "First_Name" : {
+      "title" : "First_Name",
+      "description" : "First Name Customer",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Last_Name" : {
+      "title" : "Last_Name",
+      "description" : "Last Name Customer",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Preference_DateTime_Contact" : {
+      "title" : "Preference_DateTime_Contact",
+      "description" : "Preferred date and time to contact",
+      "lightning:type" : "lightning__dateTimeStringType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "ServiceRequested" : {
+      "title" : "ServiceRequested",
+      "description" : "Service Requested by Customer",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

@@ -1,0 +1,23 @@
+SELECT ssot__Id__c,
+       ssot__FirstName__c,
+       ssot__LastName__c,
+       ssot__BirthDate__c,
+       ssot__DataSourceId__c
+FROM ssot__Individual__dlm
+WHERE ssot__LastName__c = 'Rodriguez'
+LIMIT 100
+
+
+SELECT ssot__Id__c,
+      ssot__FirstName__c,
+      ssot__LastName__c,
+      ssot__BirthDate__c
+FROM UnifiedssotIndividualCcid__dlm
+WHERE ssot__LastName__c = 'Rodriguez'
+LIMIT 100
+
+SELECT Id, 
+		UnifiedRecordId__c, 
+		SourceRecordId__c
+FROM UnifiedLinkssotIndividualCcid__dlm
+LIMIT 100

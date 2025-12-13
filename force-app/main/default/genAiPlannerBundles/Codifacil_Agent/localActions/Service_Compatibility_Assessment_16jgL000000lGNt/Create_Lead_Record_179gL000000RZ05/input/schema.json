@@ -1,0 +1,43 @@
+{
+  "required" : [ "Company", "Email", "Last_Name", "Service_Requested" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Company" : {
+      "title" : "Company",
+      "description" : "Company Customer",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Email" : {
+      "title" : "Email",
+      "description" : "Email Customer",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "First_Name" : {
+      "title" : "First_Name",
+      "description" : "First Name Customer",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Last_Name" : {
+      "title" : "Last_Name",
+      "description" : "Last Name Customer",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Service_Requested" : {
+      "title" : "Service_Requested",
+      "description" : "Service requested by the customer",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

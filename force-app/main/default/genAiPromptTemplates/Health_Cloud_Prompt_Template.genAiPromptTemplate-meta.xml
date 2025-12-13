@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>kJioiq2bL3zs6JtqKUldM85mu7aciChmbteEXRvwQlE=_4</activeVersionIdentifier>
+    <description>Prompt Template for resolver Health Cloud inqueries</description>
+    <developerName>Health_Cloud_Prompt_Template</developerName>
+    <masterLabel>Health Cloud Prompt Template</masterLabel>
+    <templateVersions>
+        <content>Use the following information to respond to the user&apos;s query:
+Information: {!$EinsteinSearch:Default_FileUDMO_SI_Retriever_1Cx_Xbd68df1f76.results}
+Inquiry: {!$Input:Input_User}
+</content>
+        <inputs>
+            <apiName>Input_User</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Input_User</masterLabel>
+            <referenceName>Input:Input_User</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>invocable://getEinsteinRetrieverResults/Default_FileUDMO_SI_Retriever_1Cx_Xbd68df1f76</definition>
+            <description>Default retriever of semantic search FileUDMO_SI</description>
+            <label>Default FileUDMO_SI Retriever</label>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>searchText</parameterName>
+                <valueExpression>{!$Input:Input_User}</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://List&lt;String&gt;</definition>
+                <isRequired>false</isRequired>
+                <parameterName>outputFieldNames</parameterName>
+                <valueExpression>[&quot;Chunk&quot;]</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://Integer</definition>
+                <isRequired>false</isRequired>
+                <parameterName>resultCount</parameterName>
+                <valueExpression>10</valueExpression>
+            </parameters>
+            <referenceName>EinsteinSearch:Default_FileUDMO_SI_Retriever_1Cx_Xbd68df1f76</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>kJioiq2bL3zs6JtqKUldM85mu7aciChmbteEXRvwQlE=_1</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Use the following information to respond to the user&apos;s query:
+Information: {!$EinsteinSearch:FileUDMO_SI_Custom_Retriever_1Cx_Xbd66a52e8a.results}
+Inquiry: {!$Input:Input_User}
+</content>
+        <inputs>
+            <apiName>Input_User</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Input_User</masterLabel>
+            <referenceName>Input:Input_User</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Draft</status>
+        <templateDataProviders>
+            <definition>invocable://getEinsteinRetrieverResults/FileUDMO_SI_Custom_Retriever_1Cx_Xbd66a52e8a</definition>
+            <description>Custom retriever for Health Cloud File</description>
+            <label>FileUDMO_SI_Custom_Retriever</label>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>searchText</parameterName>
+                <valueExpression>{!$Input:Input_User}</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://List&lt;String&gt;</definition>
+                <isRequired>false</isRequired>
+                <parameterName>outputFieldNames</parameterName>
+                <valueExpression>[&quot;Chunk&quot;,&quot;Metadata&quot;]</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://Integer</definition>
+                <isRequired>false</isRequired>
+                <parameterName>resultCount</parameterName>
+                <valueExpression>10</valueExpression>
+            </parameters>
+            <referenceName>EinsteinSearch:FileUDMO_SI_Custom_Retriever_1Cx_Xbd66a52e8a</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>kJioiq2bL3zs6JtqKUldM85mu7aciChmbteEXRvwQlE=_2</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Use the following information to respond to the user&apos;s query:
+Information: {!$EinsteinSearch:File_Health_Cloud_File_1Cx_Xbd01471915.results}
+Inquiry: {!$Input:Input_User}
+</content>
+        <inputs>
+            <apiName>Input_User</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Input_User</masterLabel>
+            <referenceName>Input:Input_User</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Draft</status>
+        <templateDataProviders>
+            <definition>invocable://getEinsteinRetrieverResults/File_Health_Cloud_File_1Cx_Xbd01471915</definition>
+            <description>File_Health_Cloud_File</description>
+            <label>File_Health_Cloud_File</label>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>searchText</parameterName>
+                <valueExpression>{!$Input:Input_User}</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://List&lt;String&gt;</definition>
+                <isRequired>false</isRequired>
+                <parameterName>outputFieldNames</parameterName>
+                <valueExpression>[&quot;Chunk&quot;]</valueExpression>
+            </parameters>
+            <referenceName>EinsteinSearch:File_Health_Cloud_File_1Cx_Xbd01471915</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>kJioiq2bL3zs6JtqKUldM85mu7aciChmbteEXRvwQlE=_3</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Use the following information to respond to the user&apos;s query:
+Information: {!$EinsteinSearch:File_Health_Cloud_File_1Cx_Xbd01471915.results}
+Inquiry: {!$Input:Input_User}
+</content>
+        <inputs>
+            <apiName>Input_User</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Input_User</masterLabel>
+            <referenceName>Input:Input_User</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>invocable://getEinsteinRetrieverResults/File_Health_Cloud_File_1Cx_Xbd01471915</definition>
+            <description>File_Health_Cloud_File</description>
+            <label>File_Health_Cloud_File</label>
+            <parameters>
+                <definition>primitive://List&lt;String&gt;</definition>
+                <isRequired>false</isRequired>
+                <parameterName>outputFieldNames</parameterName>
+                <valueExpression>[&quot;Chunk&quot;]</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>searchText</parameterName>
+                <valueExpression>{!$Input:Input_User}</valueExpression>
+            </parameters>
+            <referenceName>EinsteinSearch:File_Health_Cloud_File_1Cx_Xbd01471915</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>kJioiq2bL3zs6JtqKUldM85mu7aciChmbteEXRvwQlE=_4</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>
