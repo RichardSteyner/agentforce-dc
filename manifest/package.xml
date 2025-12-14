@@ -1,28 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
-        <members>Agentforce_Employee_Service_Agent</members>
+        <members>Esso</members>
         <name>Bot</name>
     </types>
 	<types>
-        <members>Agentforce_Employee_Service_Agent</members>
+        <members>Esso</members>
         <name>GenAiPlannerBundle</name>
     </types>
 	<types>
-        <members>Get_Gift_Card</members>
-        <members>Collect_User_Survey</members>
+        <members>Customer_Sentiment_Handler</members>
+        <members>Refund_Request_Flow</members>
+        <members>Send_Esso_Messaging_Session_Transcript</members>
+        <members>Verify_Code_and_Log_Verification</members>
         <name>Flow</name>
     </types>
 	<types>
-        <members>Get_Gift_Card</members>
-        <members>Collect_User_Survey</members>
-        <name>GenAiFunction</name>
-    </types>
-	<!--<types>
-        <members>Health_Cloud_Prompt_Template</members>
-        <name>GenAiPromptTemplate</name>
+        <members>Refund_Request__c</members>
+        <name>CustomObject</name>
     </types>
 	<types>
+        <members>Refund_Request__c.Account__c</members>
+        <members>Refund_Request__c.Amount__c</members>
+        <members>Refund_Request__c.Comments__c</members>
+        <members>Refund_Request__c.Date__c</members>
+        <members>Refund_Request__c.Order__c</members>
+        <members>Refund_Request__c.Status__c</members>
+        <members>OrderItem.Product_Name__c</members>
+        <members>Contact.Last_Customer_Verification__c</members>
+        <name>CustomField</name>
+    </types>
+	<types>
+        <members>Summarize_Esso_Messaging_Session</members>
+        <name>GenAiPromptTemplate</name>
+    </types>
+	<!--<types>
         <members>*</members>
         <name>GenAiPlugin</name>
     </types>
