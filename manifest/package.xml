@@ -43,7 +43,7 @@
         <name>GenAiFunction</name>
     </types>-->
 	<types>
-        <members>*</members>
+        <members>dateTimeStringType</members>
         <name>LightningTypeBundle</name>
     </types>
     <version>65.0</version>
