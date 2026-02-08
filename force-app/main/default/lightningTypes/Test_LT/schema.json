@@ -1,5 +1,0 @@
-{
-  "title" : "Test LT",
-  "description" : "test",
-  "lightning:type" : "@apexClassType/LightningTypes__DateTimeStringOverride"
-}
