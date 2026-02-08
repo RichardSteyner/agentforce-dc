@@ -1,0 +1,5 @@
+{
+  "title" : "My Date Time",
+  "description" : "Lightning Type MyDateTime",
+  "lightning:type" : "@apexClassType/c__MyDateTime"
+}
