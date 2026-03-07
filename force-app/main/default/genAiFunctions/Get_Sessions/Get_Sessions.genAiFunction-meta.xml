@@ -6,5 +6,6 @@
     <invocationTargetType>flow</invocationTargetType>
     <isConfirmationRequired>false</isConfirmationRequired>
     <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+    <localDeveloperName>Get_Sessions</localDeveloperName>
     <masterLabel>Get Sessions</masterLabel>
 </GenAiFunction>

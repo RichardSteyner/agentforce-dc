@@ -8,7 +8,7 @@ system:
 
 config:
     developer_name: "CC_Service_Agent"
-    default_agent_user: "coral_cloud_experience_agent.n43kkvojb4ro.igg9aggtod.yknqbtmplmtm@agentforce.com"
+    default_agent_user: "codifacil_agent@00dgl00000dgxbd.ext"
     agent_label: "CC Service Agent"
     description: "New agent description"
 
@@ -147,6 +147,7 @@ topic Experience_Management:
 
 
 
+
     actions:
         Get_Experience_Details:
           description: "Provides details about an Experience__c that a user would like more information about."
@@ -167,6 +168,7 @@ topic Experience_Management:
           label: "Get Experience Details"
           require_user_confirmation: False
           include_in_progress_indicator: False
+
         Get_Customer_Details:
           description: "Validate the Customer details by passing their email and memberNumber to see if there is a related contact."
           inputs:
@@ -191,6 +193,7 @@ topic Experience_Management:
           label: "Get Customer Details"
           require_user_confirmation: False
           include_in_progress_indicator: False
+
         Get_Sessions:
             description: "Get the Sessions__c based on the provided specific Date and the Id of the Experience__c"
             label: "Get Sessions"
@@ -198,7 +201,7 @@ topic Experience_Management:
             include_in_progress_indicator: False
             source: "Get_Sessions"
             target: "flow://Get_Sessions"
-                                                                                                        
+                                                                                                                
             inputs:
                 "experienceId": string
                     description: "The Id of the Experience__c that you would like to check for."
@@ -211,7 +214,7 @@ topic Experience_Management:
                     is_required: True
                     is_user_input: False
                     complex_data_type_name: "lightning__dateType"
-                                                                                                        
+                                                                                                                
             outputs:
                 "sessions": list[object]
                     description: "The available Session__c records for the Experience__c"
@@ -227,7 +230,7 @@ topic Experience_Management:
             include_in_progress_indicator: False
             source: "Create_Experience_Session_Booking"
             target: "flow://Create_Experience_Session_Booking"
-                                                                                                        
+                                                                                                                
             inputs:
                 "Contact_Id": string
                     description: "The Id of a Contact record that you would like to create the booking for."
@@ -245,7 +248,7 @@ topic Experience_Management:
                     label: "Session_Id"
                     is_required: True
                     is_user_input: False
-                                                                                                        
+                                                                                                                
             outputs:
                 "Booking": object
                     description: "The booking that has been created."

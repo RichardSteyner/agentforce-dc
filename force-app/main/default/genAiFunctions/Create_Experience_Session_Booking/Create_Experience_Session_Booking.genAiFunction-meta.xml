@@ -6,5 +6,6 @@
     <invocationTargetType>flow</invocationTargetType>
     <isConfirmationRequired>false</isConfirmationRequired>
     <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+    <localDeveloperName>Create_Experience_Session_Booking</localDeveloperName>
     <masterLabel>Create Experience Session Booking</masterLabel>
 </GenAiFunction>
