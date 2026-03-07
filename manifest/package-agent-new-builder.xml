@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+	<types>
+        <members>CC_Service_Agent</members>
+        <name>Bot</name>
+    </types>
+	<types>
+        <members>CC_Service_Agent</members>
+        <name>AiAuthoringBundle</name>
+    </types>
+	<types>
+        <members>CC_Service_Agent_v1</members>
+        <name>GenAiPlannerBundle</name>
+    </types>
+	<types>
+		<members>Create_Experience_Session_Booking</members>
+		<members>Get_Sessions</members>
+		<name>GenAiFunction</name>
+	</types>
+	<types>
+        <members>Create_Experience_Session_Booking</members>
+        <name>Flow</name>
+    </types>
+    <version>65.0</version>
+</Package>

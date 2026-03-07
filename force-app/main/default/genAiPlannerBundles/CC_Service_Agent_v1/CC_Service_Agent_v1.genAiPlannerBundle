@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlannerBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>New agent description</description>
+    <localTopicLinks>
+        <genAiPluginName>Experience_Management_16jg80000006S3F</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>ambiguous_question_16jg80000006S3F</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>escalation_16jg80000006S3F</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>off_topic_16jg80000006S3F</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>topic_selector_16jg80000006S3F</genAiPluginName>
+    </localTopicLinks>
+    <localTopics>
+        <fullName>escalation_16jg80000006S3F</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Handles requests from users who want to transfer or escalate their conversation to a live human agent.</description>
+        <developerName>escalation_16jg80000006S3F</developerName>
+        <genAiPluginInstructions>
+            <description>You are an AI Agent.</description>
+            <developerName>instruction0_179g8000000IOwl</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179g8000000IOwl</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localDeveloperName>escalation</localDeveloperName>
+        <masterLabel>Escalation</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>off_topic_16jg80000006S3F</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Redirect conversation to relevant topics when user request goes off-topic</description>
+        <developerName>off_topic_16jg80000006S3F</developerName>
+        <genAiPluginInstructions>
+            <description>You are an AI Agent.</description>
+            <developerName>instruction0_179g8000000IOwk</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179g8000000IOwk</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localDeveloperName>off_topic</localDeveloperName>
+        <masterLabel>Off Topic</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>ambiguous_question_16jg80000006S3F</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Redirect conversation to relevant topics when user request is too ambiguous</description>
+        <developerName>ambiguous_question_16jg80000006S3F</developerName>
+        <genAiPluginInstructions>
+            <description>You are an AI Agent.</description>
+            <developerName>instruction0_179g8000000IOwj</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179g8000000IOwj</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localDeveloperName>ambiguous_question</localDeveloperName>
+        <masterLabel>Ambiguous Question</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>topic_selector_16jg80000006S3F</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Welcome the user and determine the appropriate topic based on user input</description>
+        <developerName>topic_selector_16jg80000006S3F</developerName>
+        <genAiPluginInstructions>
+            <description>You are an AI Agent.</description>
+            <developerName>instruction0_179g8000000IOwn</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179g8000000IOwn</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localDeveloperName>topic_selector</localDeveloperName>
+        <masterLabel>Topic Selector</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>Experience_Management_16jg80000006S3F</fullName>
+        <canEscalate>false</canEscalate>
+        <description>This topic addresses customer inquiries and issues related to booking experiences at Coral Cloud Resorts, including making reservations, modifying session bookings, and answering queries about experience details.</description>
+        <developerName>Experience_Management_16jg80000006S3F</developerName>
+        <genAiPluginInstructions>
+            <description>You are an AI Agent.</description>
+            <developerName>instruction0_179g8000000IOwm</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179g8000000IOwm</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>Get_Customer_Details_179g8000000IOwm</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>Get_Sessions_179g8000000IOwm</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>Create_Experience_Session_Booking_179g8000000IOwm</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>Get_Experience_Details_179g8000000IOwm</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>Get_Customer_Details_179g8000000IOwm</fullName>
+            <description>Validate the Customer details by passing their email and memberNumber to see if there is a related contact.</description>
+            <developerName>Get_Customer_Details_179g8000000IOwm</developerName>
+            <invocationTarget>Get_Customer_Details</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>Get_Customer_Details</localDeveloperName>
+            <masterLabel>Get Customer Details</masterLabel>
+        </localActions>
+        <localActions>
+            <fullName>Get_Experience_Details_179g8000000IOwm</fullName>
+            <description>Provides details about an Experience__c that a user would like more information about.</description>
+            <developerName>Get_Experience_Details_179g8000000IOwm</developerName>
+            <invocationTarget>Get_Experience_Details</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>Get_Experience_Details</localDeveloperName>
+            <masterLabel>Get Experience Details</masterLabel>
+        </localActions>
+        <localActions>
+            <fullName>Create_Experience_Session_Booking_179g8000000IOwm</fullName>
+            <description>This flow is used to create a Booking for a user that wants to attend an experience session. Each Experience__c has multiple Session__c records that each have a date and time allocated to them. A Contact Id needs to passed into the flow with a Session__c Id to create the booking. This flow also requires a number of guests.</description>
+            <developerName>Create_Experience_Session_Booking_179g8000000IOwm</developerName>
+            <invocationTarget>Create_Experience_Session_Booking</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>Create_Experience_Session_Booking</localDeveloperName>
+            <masterLabel>Create Experience Session Booking</masterLabel>
+            <source>Create_Experience_Session_Booking</source>
+        </localActions>
+        <localActions>
+            <fullName>Get_Sessions_179g8000000IOwm</fullName>
+            <description>Get the Sessions__c based on the provided specific Date and the Id of the Experience__c</description>
+            <developerName>Get_Sessions_179g8000000IOwm</developerName>
+            <invocationTarget>Get_Sessions</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>Get_Sessions</localDeveloperName>
+            <masterLabel>Get Sessions</masterLabel>
+            <source>Get_Sessions</source>
+        </localActions>
+        <localDeveloperName>Experience_Management</localDeveloperName>
+        <masterLabel>Experience Management</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <masterLabel>CC Service Agent</masterLabel>
+    <plannerType>Atlas__ConcurrentMultiAgentOrchestration</plannerType>
+</GenAiPlannerBundle>
