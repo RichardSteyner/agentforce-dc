@@ -1,0 +1,37 @@
+<template>
+	<div class="slds-var-m-around_medium slds-grid slds-grid_vertical slds-box slds-theme_default">
+		<h1>
+			<font size="3"><b>Housing Market Dashboard</b></font>
+		</h1>
+		<!-- Chat messages container -->
+		<div class="slds-scrollable_y" style="height: 440px" lwc:ref="chatContainer">
+			<!-- Iterate over each message in the messages array -->
+			<template for:each={messages} for:item="message">
+				<div key={message.id} class="slds-var-m-around_small">
+					<!-- If the message is from the assistant -->
+					<div class="custom-chat-message_inbound slds-var-p-around_small">
+						<div class="slds-chat-message__body">
+							<div class="slds-chat-message__text">{message.text}</div>
+						</div>
+					</div>
+				</div>
+			</template>
+		</div>
+		<!-- Loading indicator -->
+		<template lwc:if={isLoading}>
+			<div class="loading-container slds-var-m-around_small">
+				<div class="loading-text">
+					Analyzing data… One moment.
+				</div>
+				<div class="loading-indicator"></div>
+			</div>
+		</template>
+		<!-- Send button -->
+		<div class="slds-grid slds-grid_vertical-align-center send-button-container">
+			<div class="slds-col slds-size_1-of-4">
+				<lightning-button label="Analyze" variant="brand" onclick={handleSendMessage}
+					disabled={isLoading}></lightning-button>
+			</div>
+		</div>
+	</div>
+</template>
