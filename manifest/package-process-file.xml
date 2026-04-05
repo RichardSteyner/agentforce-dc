@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+	<types>
+        <members>Process_Document_By_File</members>
+        <name>GenAiPromptTemplate</name>
+    </types>
+	<types>
+        <members>Process_Document_By_File_Id</members>
+        <members>Get_Id_from_Array</members>
+        <members>Upload_and_Process_Business_Card</members>
+        <name>Flow</name>
+    </types>
+    <version>65.0</version>
+</Package>

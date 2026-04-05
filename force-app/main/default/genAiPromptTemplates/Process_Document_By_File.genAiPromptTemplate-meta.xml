@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>kJioiq2bL3zs6JtqKUldM85mu7aciChmbteEXRvwQlE=_1</activeVersionIdentifier>
+    <description>Process Image/PDF By Content Document Object</description>
+    <developerName>Process_Document_By_File</developerName>
+    <masterLabel>Process Document By File</masterLabel>
+    <templateVersions>
+        <content>You are an AI agent that extracts contact details from a business card photo or PDF.
+Extract the following fields: First Name, Last Name, Title, Company Name, Email, and Mobile Phone.
+Return the response in JSON format.
+
+Here is an example output:
+
+{
+  &quot;FirstName&quot;: &quot;Yumi&quot;,
+  &quot;LastName&quot;: &quot;Ibrahimzade&quot;,
+  &quot;Title&quot;: &quot;Salesforce Solution Architect&quot;,
+  &quot;CompanyName&quot;: &quot;Salesforce Time&quot;,
+  &quot;Email&quot;: &quot;info@salesforcetime.com&quot;,
+  &quot;MobilePhone&quot;: &quot;0549000000&quot;
+}
+
+Business Card Image/PDF:
+{!$RecordSnapshot:File.snapshot}
+</content>
+        <inputs>
+            <apiName>File</apiName>
+            <definition>SOBJECT://ContentDocument</definition>
+            <masterLabel>File</masterLabel>
+            <referenceName>Input:File</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>invocable://getDataForGrounding</definition>
+            <description>Retrieves record data for grounding a prompt template.</description>
+            <label>Record Snapshot</label>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>recordId</parameterName>
+                <valueExpression>{!$Input:File.Id}</valueExpression>
+            </parameters>
+            <referenceName>RecordSnapshot:File</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>kJioiq2bL3zs6JtqKUldM85mu7aciChmbteEXRvwQlE=_1</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>
