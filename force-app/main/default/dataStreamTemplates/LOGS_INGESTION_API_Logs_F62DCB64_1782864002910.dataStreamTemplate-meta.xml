@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataStreamTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <dataSourceBundleDefinition>IngestionLogs</dataSourceBundleDefinition>
+    <dataSourceObject>LOGS_INGESTION_API_Logs_F62DCB64</dataSourceObject>
+    <masterLabel>LOGS_INGESTION_API-Logs</masterLabel>
+    <objectCategory>Salesforce_SFDCReferenceModel_0_93.Related</objectCategory>
+    <refreshFrequency>NONE</refreshFrequency>
+    <refreshMode>UPSERT</refreshMode>
+    <sourceObjectName>LOGS_INGESTION_API_Logs_F62DCB64</sourceObjectName>
+    <streamType>INGEST</streamType>
+    <templateVersion>1</templateVersion>
+</DataStreamTemplate>

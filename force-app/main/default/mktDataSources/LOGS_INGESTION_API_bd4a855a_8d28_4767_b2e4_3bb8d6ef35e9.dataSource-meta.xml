@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataSource xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>LOGS_INGESTION_API_bd4a855a_8d28_4767_b2e4_3bb8d6ef35e9</masterLabel>
+    <prefix>LOG</prefix>
+</DataSource>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtlClntAppGlobalOauthSettings xmlns="http://soap.sforce.com/2006/04/metadata">
+    <callbackUrl>https://orgfarm-25d2ab092b-dev-ed.develop.my.salesforce.com</callbackUrl>
+    <certificate>MIIDazCCAlOgAwIBAgIUAzX/itb82CEmjjwgPlXsUqpXuNQwDQYJKoZIhvcNAQEL
+BQAwRTELMAkGA1UEBhMCUEUxEzARBgNVBAgMClNvbWUtU3RhdGUxITAfBgNVBAoM
+GEludGVybmV0IFdpZGdpdHMgUHR5IEx0ZDAeFw0yNjA2MzAyMDEwMzNaFw0yNzA2
+MzAyMDEwMzNaMEUxCzAJBgNVBAYTAlBFMRMwEQYDVQQIDApTb21lLVN0YXRlMSEw
+HwYDVQQKDBhJbnRlcm5ldCBXaWRnaXRzIFB0eSBMdGQwggEiMA0GCSqGSIb3DQEB
+AQUAA4IBDwAwggEKAoIBAQDzWPKz4qko3okSFL+H+AaU9jZA9+SfgSf6poNks1Xc
+NmdJws/BY+Vy66UQ9uTpAEYPZE+aj5N6Z4i8jo1AZXyGqs/5ysbsrGVXvabcwVg0
+YLkx7OrlBo9JRmQZQXwxzh+nodZzUK9FpL2iPzYwppZQ97B3GdK9/k5BOSxYem1x
+W4ARSCfwolOdFjS9UBupd85X/SncF4RhlQQ7+2UPSnJeEPsM2U9sQt3GtJ2E6umN
+UbWB1ArR0TGQCGrJxAglGRSIFbRME+EE1s1SwhzYYxuDjd94QXz6ebLgwdE6VRyI
+P/nkU1jfJkchq5jlx5GvKdAPVgeja66Ad4bPfZo/CYEdAgMBAAGjUzBRMB0GA1Ud
+DgQWBBQiXgzAndtOceKLxfnTtyO7Vn3nKDAfBgNVHSMEGDAWgBQiXgzAndtOceKL
+xfnTtyO7Vn3nKDAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQB3
+rKDbo7nPz3a0ssS9t6TVVsHViSZuZ2wZ3WY59l8yJu6kzhQIwlRG8rxTeX8ZtgZW
+6jshT9J6WDiIRj3DRfcS+eDLylwGNpYq4ZwIZevctgbihz5zP9Oe08WqWWd4fDFb
+zC4L3WZ1nMd+97mdkaf22BuE8jA5Fb7aznCKGvalw9Tfw+8DQ2bbkS4ddihAREQt
+3X6W/iGFge8thuf2/iIRkfmuFPDlAojPcPh8urNuHZEJ+f3A9SNbrnIGyQek1yBT
+hia4RyR2AhRWIfaAgW6LcDDxDvLuEFGWyCRYlW3N8clJ+Uns28hoFjegA2oVa55H
+cF4z3h/lTYrCpH7ep+2L</certificate>
+    <consumerKey>3MVG9dAEux2v1sLt4fNGKHMv4Nh51CdEwpaH8J6iTeb.PQAF_0d_2wFbaAItmL.PtHvPij_Z9beZkqHj4vn_J</consumerKey>
+    <externalClientApplication>Logs_Codifacil_Ingestion</externalClientApplication>
+    <isClientCredentialsFlowEnabled>true</isClientCredentialsFlowEnabled>
+    <isCodeCredFlowEnabled>false</isCodeCredFlowEnabled>
+    <isCodeCredPostOnly>false</isCodeCredPostOnly>
+    <isConsumerSecretOptional>true</isConsumerSecretOptional>
+    <isDeviceFlowEnabled>false</isDeviceFlowEnabled>
+    <isIntrospectAllTokens>false</isIntrospectAllTokens>
+    <isNamedUserJwtEnabled>false</isNamedUserJwtEnabled>
+    <isPkceRequired>false</isPkceRequired>
+    <isRefreshTokenRotationEnabled>false</isRefreshTokenRotationEnabled>
+    <isSecretRequiredForRefreshToken>false</isSecretRequiredForRefreshToken>
+    <isSecretRequiredForTokenExchange>true</isSecretRequiredForTokenExchange>
+    <isTokenExchangeEnabled>false</isTokenExchangeEnabled>
+    <label>Logs_Codifacil_Ingestion_glbloauth</label>
+    <shouldRotateConsumerKey>false</shouldRotateConsumerKey>
+    <shouldRotateConsumerSecret>false</shouldRotateConsumerSecret>
+</ExtlClntAppGlobalOauthSettings>

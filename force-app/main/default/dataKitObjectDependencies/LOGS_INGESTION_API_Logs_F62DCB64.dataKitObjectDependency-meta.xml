@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataKitObjectDependency xmlns="http://soap.sforce.com/2006/04/metadata">
+    <dataPackageKitDef>Ingestion_Example</dataPackageKitDef>
+    <developerName>LOGS_INGESTION_API_Logs_F62DCB64</developerName>
+    <masterLabel>LOGS_INGESTION_API_Logs_F62DCB64__dll</masterLabel>
+    <sourceObject>LOGS_INGESTION_API_Logs_F62DCB64</sourceObject>
+    <sourceObjectType>DataSourceObject</sourceObjectType>
+    <targetObject>LOGS_INGESTION_API_Logs_F62DCB64</targetObject>
+</DataKitObjectDependency>

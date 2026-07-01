@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataKitObjectDependency xmlns="http://soap.sforce.com/2006/04/metadata">
+    <dataPackageKitDef>Ingestion_Example</dataPackageKitDef>
+    <developerName>IngestionLogs</developerName>
+    <masterLabel>IngestionLogs</masterLabel>
+    <sourceObject>IngestionLogs</sourceObject>
+    <sourceObjectType>DataSourceBundleDefinition</sourceObjectType>
+    <targetObject>IngestionLogs</targetObject>
+</DataKitObjectDependency>

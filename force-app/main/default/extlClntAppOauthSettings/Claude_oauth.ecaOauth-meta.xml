@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtlClntAppOauthSettings xmlns="http://soap.sforce.com/2006/04/metadata">
+    <commaSeparatedOauthScopes>RefreshToken, MCP</commaSeparatedOauthScopes>
+    <externalClientApplication>Claude</externalClientApplication>
+    <isFirstPartyAppEnabled>false</isFirstPartyAppEnabled>
+    <label>Claude_oauth</label>
+    <oauthLink>00DgL00000DGXbd:888gL000000gLKz</oauthLink>
+</ExtlClntAppOauthSettings>

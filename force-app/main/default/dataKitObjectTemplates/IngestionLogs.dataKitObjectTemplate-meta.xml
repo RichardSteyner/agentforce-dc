@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataKitObjectTemplate xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <developerName xsi:nil="true"/>
+    <entityPayload>{&quot;dataConnectorIngestApiSourceName&quot;:&quot;LOGS_INGESTION_API&quot;,&quot;dataConnectorIngestApiDeveloperName&quot;:&quot;LOGS_INGESTION_API&quot;,&quot;dataConnectorIngestApiMasterLabel&quot;:&quot;LOGS_INGESTION_API&quot;,&quot;externalDataConnectorDeveloperName&quot;:&quot;LOGS_INGESTION_API_bd4a855a_8d28_4767_b2e4_3bb8d6ef35e9&quot;,&quot;externalDataConnectorMasterLabel&quot;:&quot;LOGS_INGESTION_API&quot;,&quot;subtype&quot;:&quot;&quot;}</entityPayload>
+    <masterLabel>IngestionLogs</masterLabel>
+    <parentDataPackageKitDefinitionName xsi:nil="true"/>
+    <sourceObject>IngestionLogs</sourceObject>
+    <sourceObjectType>StreamingAppAndIngestionConnector</sourceObjectType>
+    <templateVersion>1</templateVersion>
+</DataKitObjectTemplate>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+	<!--External application configurations
+    Guías para el desarrollo de la aplicación externa que enviará los datos a Salesforce
+    https://developer.salesforce.com/docs/data/data-cloud-int/references/data-cloud-ingestionapi-ref/c360-a-api-get-started.html
+    https://help.salesforce.com/s/articleView?id=xcloud.remoteaccess_oauth_jwt_flow.htm&type=5
+    https://developer.salesforce.com/docs/data/data-cloud-int/guide/c360-a-create-ingestion-api-connected-app.html
+    https://help.salesforce.com/s/articleView?id=xcloud.jwt_eca_configuration.htm&type=5
+    Pasos que resumen el 2do link: https://share.gemini.google/sWAlatzSCdGp
+    También se puede ver la aplicación Logs donde se realiza el envio de datos a SF.
+    -->
+    <types>
+		<members>Logs_Codifacil_Ingestion_plcy</members>
+		<name>ExtlClntAppConfigurablePolicies</name>
+	</types>
+	<types>
+		<members>Logs_Codifacil_Ingestion_glbloauth</members>
+		<name>ExtlClntAppGlobalOauthSettings</name>
+	</types>
+	<types>
+		<members>Logs_Codifacil_Ingestion_oauthPlcy</members>
+		<name>ExtlClntAppOauthConfigurablePolicies</name>
+	</types>
+	<types>
+		<members>Logs_Codifacil_Ingestion_oauth</members>
+		<name>ExtlClntAppOauthSettings</name>
+	</types>
+    <types>
+        <members>Logs_Codifacil_Ingestion</members>
+        <name>ExternalClientApplication</name>
+    </types>
+    <!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
+    <types>
+        <members>IngestionLogs</members>
+        <members>LOGS_INGESTION_API_Logs_F62DCB64</members>
+        <name>DataKitObjectDependency</name>
+    </types>
+    <types>
+        <members>IngestionLogs</members>
+        <members>LOGS_INGESTION_API_Logs_F62DCB64</members>
+        <name>DataKitObjectTemplate</name>
+    </types>
+    <types>
+        <members>Ingestion_Example</members>
+        <name>DataPackageKitDefinition</name>
+    </types>
+    <types>
+        <members>Ingestion_Example_1782864002009</members>
+        <members>Ingestion_Example_1782864002701</members>
+        <name>DataPackageKitObject</name>
+    </types>
+    <types>
+        <members>LOGS_INGESTION_API_bd4a855a_8d28_4767_b2e4_3bb8d6ef35e9</members>
+        <name>DataSource</name>
+    </types>
+    <types>
+        <members>IngestionLogs</members>
+        <name>DataSourceBundleDefinition</name>
+    </types>
+    <types>
+        <members>LOGS_INGESTION_API_Logs_F62DCB64</members>
+        <name>DataSourceObject</name>
+    </types>
+    <types>
+        <members>LOGS_INGESTION_API_Logs_F62DCB64_1782864002910</members>
+        <name>DataStreamTemplate</name>
+    </types>
+    <types>
+        <members>Logs</members>
+        <name>ExtDataTranObjectTemplate</name>
+    </types>
+    <version>66.0</version>
+</Package>
