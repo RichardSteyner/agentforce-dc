@@ -1,0 +1,63 @@
+.speaker-card {
+    padding: 1rem;
+    border: 1px solid #dddbda;
+    border-radius: 0.5rem;
+    background: #fff;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
+}
+
+.card-heading {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    color: #0176d3;
+}
+
+.heading {
+    margin: 0;
+    color: #181818;
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.settings {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 0.75rem 1rem;
+    margin-top: 0.5rem;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.status-message {
+    min-height: 1.25rem;
+    margin: 0.75rem 0 0;
+    color: #444;
+    font-size: 0.875rem;
+}
+
+@media (max-width: 480px) {
+    .speaker-card {
+        padding: 0.75rem;
+    }
+
+    .settings {
+        grid-template-columns: 1fr;
+        gap: 0.25rem;
+    }
+
+    .controls {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .controls lightning-button:first-child {
+        grid-column: 1 / -1;
+    }
+}

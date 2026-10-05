@@ -1,0 +1,63 @@
+<template>
+    <section class="speaker-card" aria-label="Texto a voz">
+        <div class="card-heading">
+            <lightning-icon
+                icon-name="utility:volume_high"
+                size="small"
+                alternative-text=""
+            ></lightning-icon>
+            <h2 class="heading">Texto a voz</h2>
+        </div>
+
+        <lightning-textarea
+            label="Texto para leer"
+            value={text}
+            onchange={handleTextChange}
+            maxlength="3000"
+            placeholder="Escribe el texto que quieres escuchar"
+        ></lightning-textarea>
+
+        <template lwc:if={isSupported}>
+            <div class="settings">
+                <lightning-combobox
+                    label="Voz"
+                    value={selectedVoiceURI}
+                    options={voiceOptions}
+                    onchange={handleVoiceChange}
+                ></lightning-combobox>
+                <lightning-slider
+                    label="Velocidad"
+                    min="0.5"
+                    max="2"
+                    step="0.1"
+                    value={rate}
+                    onchange={handleRateChange}
+                ></lightning-slider>
+            </div>
+
+            <div class="controls">
+                <lightning-button
+                    label="Leer en voz alta"
+                    icon-name="utility:play"
+                    variant="brand"
+                    onclick={handleSpeak}
+                    disabled={isSpeakDisabled}
+                ></lightning-button>
+                <lightning-button
+                    label={pauseResumeLabel}
+                    icon-name={pauseResumeIcon}
+                    onclick={handlePauseResume}
+                    disabled={areControlsDisabled}
+                ></lightning-button>
+                <lightning-button
+                    label="Detener"
+                    icon-name="utility:stop"
+                    onclick={handleStop}
+                    disabled={areControlsDisabled}
+                ></lightning-button>
+            </div>
+        </template>
+
+        <p class="status-message" aria-live="polite">{statusMessage}</p>
+    </section>
+</template>
