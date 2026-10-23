@@ -1,0 +1,117 @@
+system:
+    instructions: "You are an assistant that helps Salesforce users create Opportunities. Always reply in the same language the user writes in. Be concise and never invent record data."
+    messages:
+        welcome: "¡Hola! Puedo ayudarte a crear una oportunidad en Salesforce. Dime la cuenta, el nombre de la oportunidad, la fecha de cierre y el monto."
+        error: "Ocurrió un error inesperado. Por favor, inténtalo de nuevo."
+
+config:
+    developer_name: "Create_Opportunity_Agent"
+    agent_label: "Create Opportunity Agent"
+    description: "Creates Opportunities for an existing Account after identifying the account by name and getting explicit user confirmation."
+    agent_type: "AgentforceEmployeeAgent"
+
+variables:
+    user_confirmed: mutable boolean = False
+        description: "True only during the turn in which the user explicitly confirmed the creation. Reset automatically at the start of every turn."
+    org_base_url: mutable string = "https://MY-DOMAIN.lightning.force.com"
+        description: "Base URL of the Salesforce org (Lightning domain), without trailing slash. Used to build the Opportunity link."
+
+language:
+    default_locale: "en_US"
+    additional_locales: ""
+    all_additional_locales: False
+
+start_agent opportunity_creator:
+    label: "Opportunity Creator"
+    description: "Handles requests to create a new Opportunity for an Account."
+
+    actions:
+        identify_account:
+            description: "Finds Account records whose name matches the name given by the user. Can return zero, one or several matches."
+            label: "Identify Account By Name"
+            target: "standardInvocableAction://identifyRecordByName"
+            inputs:
+                objectApiName: string
+                    description: "API name of the object to search. Always Account."
+                    label: "Object API Name"
+                    is_required: True
+                recordName: string
+                    description: "Account name as typed by the user."
+                    label: "Record Name"
+                    is_required: True
+            outputs:
+                records: list[object]
+                    description: "Matching Account records, each with its Id and Name."
+                    label: "Records"
+                    complex_data_type_name: "lightning__recordInfoType"
+                    is_displayable: False
+                    is_used_by_planner: True
+
+        create_opportunity:
+            description: "Creates an Opportunity linked to an Account. Only call it after the user explicitly confirmed the details."
+            label: "Create Opportunity"
+            target: "flow://CreateOpportunityAgentAction"
+            inputs:
+                accountId: string
+                    description: "Id of the Account the Opportunity belongs to. Must come from the identify_account result."
+                    label: "Account Id"
+                    is_required: True
+                name: string
+                    description: "Name of the Opportunity."
+                    label: "Opportunity Name"
+                    is_required: True
+                closeDate: date
+                    description: "Expected close date of the Opportunity."
+                    label: "Close Date"
+                    is_required: True
+                amount: number
+                    description: "Opportunity amount."
+                    label: "Amount"
+                    is_required: True
+            outputs:
+                isSuccess: boolean
+                    description: "True if the Opportunity was created."
+                    label: "Is Success"
+                    is_displayable: False
+                    is_used_by_planner: True
+                error: string
+                    description: "Error message when the creation failed."
+                    label: "Error"
+                    is_displayable: True
+                    is_used_by_planner: True
+                opportunityId: string
+                    description: "Id of the created Opportunity."
+                    label: "Opportunity Id"
+                    is_displayable: False
+                    is_used_by_planner: True
+
+    before_reasoning:
+        set @variables.user_confirmed = False
+
+    reasoning:
+        instructions: ->
+            | Help the user create one Opportunity. Follow these steps in order and do only the next one that applies.
+            | 1. Collect the four required values: account name, opportunity name, close date and amount. Ask for whatever is missing in a single message. Do not guess values.
+            | 2. Once the account name is known, call identify_account with objectApiName "Account" and the account name given by the user.
+            | 3. If no Account matches, tell the user and ask them to provide another name. Do not continue.
+            | 4. If several Accounts match, list them (name and any distinguishing detail returned) and ask the user which one they mean. Do not pick one yourself and do not continue until the user answers.
+            | 5. When exactly one Account is identified, show a summary with Account, Opportunity name, Close date and Amount, and ask the user to confirm the creation. Do not call create_opportunity in this turn.
+            | 6. Only if the user's latest message clearly confirms the summary (for example "yes", "sí", "confirmo"), call confirm_creation and then call create_opportunity using the identified Account Id. If the user changes any value, update the summary and ask for confirmation again.
+            | 7. If create_opportunity returns isSuccess true, tell the user the Opportunity was created and give a link in Markdown format: [<Opportunity name given by the user>]({!@variables.org_base_url}/lightning/r/Opportunity/<opportunityId returned by the action>/view). Use the exact opportunityId returned by the action.
+            | 8. If isSuccess is false, tell the user the Opportunity was not created, explain the error returned, and offer to retry. Never state or imply that it was created and never show a link.
+
+        actions:
+            identify_account: @actions.identify_account
+                with objectApiName="Account"
+                with recordName=...
+
+            confirm_creation: @utils.setVariables
+                description: "Record that the user explicitly confirmed the summary. Call it only when the user's latest message is a clear confirmation."
+                with user_confirmed=...
+
+            create_opportunity: @actions.create_opportunity
+                available when @variables.user_confirmed == True
+                with accountId=...
+                with name=...
+                with closeDate=...
+                with amount=...
